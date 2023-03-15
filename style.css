@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-base);
+    color: var(--text-color);
+    padding-block-start: 2rem;
+    padding-inline-start: 2rem;
+    padding-inline-end: 2rem;
+    padding-block-end: 2rem;
+  }
+  
+header > h1 {
+    margin-block-start: 0;
+    font-size: 3rem;
+}
+
+.formdiv {
+    flex-wrap: wrap;
+    align-items: stretch;
+    --gap: 2rem;
+}
+
+.formdiv > * {
+    min-height: 100%;
+}
+
+.formdiv-inside-container {
+    --gap: 2rem;
+    --max-spc-width: 60vw;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: space-around;
+    align-items: stretch;
+    margin: 0;
+}
+
+.formdiv-inside-container label, span {
+    align-self: center;
+}
+
+.number-input {
+    text-align: center;
+    color: var(--blog-card-text-color);
+    background-color: var(--section-offwhite-color);
+    border: none;
+}
+
+#factcontainer {transition: 1000ms ease-in-out;}
+
+.animateIn {animation: animate-in 400ms ease-in-out;}
+
+.fitSize {animation: fit-size 9000ms ease-in-out;}
+
+#factoutput {text-align: center;}
+
+.extradiv {transition: all 750ms ease-in-out;}
+
+.d-none {display: none;}
+
+.opacity-zero {opacity: 0;}
+
+.d-out {
+    animation-name: slide-out;
+    animation-delay: calc(var(--animation-order) * 150ms);
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.d-in {
+    animation-name: slide-in;
+    animation-delay: calc(var(--animation-order) * 150ms);
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: scale(0.8) translateX(-200%);
+    }
+
+    70% {
+        transform: scale(0.8) translateX(0%);
+    }
+
+    100% {
+        transform: scale(1) translateX(0%);
+    }
+}
+
+@keyframes slide-out {
+    0% {
+        transform: scale(1) translateX(0%);
+    }
+
+    30% {
+        transform: scale(0.8) translateX(0%);
+    }
+
+    100% {
+        transform: scale(0.8) translateX(200%);
+    }
+}
+
+@keyframes animate-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.6) translateY(-8px) translateX(-8px);
+    }
+    
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fit-size {
+    0% {
+        background-color: red;
+        height: initial;
+    }
+
+    100% {
+        background-color: blue;
+        height: fit-content;
+    }
+}

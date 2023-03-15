@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Facts Generator</title>
+    <link rel="icon" href="/media/icons/cat-favicon.gif" type="image/gif">
+    <link rel="stylesheet" href="https://as1553-component-library.netlify.app/css/color-scheme.css">
+    <link rel="stylesheet" id="mode-select" href="https://as1553-component-library.netlify.app">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script> 
+</head>
+<body onload="generateFact()" >
+    <button id="theme-toggle-button"></button>
+    <script src="https://as1553-component-library.netlify.app/javaScript/darkmodetoggle.js"></script>
+    <header class="header-base capitalize">
+        <h1>cat fact generator</h1>
+    </header>
+    <div class="container-center section-base" style="text-align: center;">
+        <p>It generates a fact related to cats in the word limit you specify.</p>
+        <small>Check it out!</small>
+    </div>
+    <div id="factcontainer" class="container-center d-none">
+        <div id="factoutput" class="section-offwhite"></div>
+    </div>
+    <div class="formdiv flex container-center section-base"  id="newfactmarker">
+        <div class="formdiv-inside-container flex container-center">
+            <label for="limitword">Limit Words to :</label>
+            <input class="number-input" type="number" name="limitword" placeholder="Max Length" id="wordlimit">
+        </div>
+        <div class="formdiv-inside-container grid container-center">
+            <label for="numberoffacts">for</label>
+            <input class="number-input" type="number" name="numberoffacts" min="2" placeholder="Number of Facts" id="multiplefacts">
+            <span>facts</span>
+        </div>
+        <div class="flex formdiv-inside-container"><button class="primary-button" onclick="generateFact()">Another!</button></div>
+    </div>   
+    <!-- <footer class="footer-base flex">
+        <div class="footer-heading">Social Links</div>
+        <ul class="footer-social-links list-style-none flex">
+            <li><a href="https://linkedin.com/in/abhijeetsingla1553" target="_blank"><img
+                        src="https://as1553-component-library.netlify.app/media/icons/linkedin.svg" alt="linkedin" width="25px" height="25px"></a></li>
+            <li><a href="https://github.com/AbhijeetSingla" target="_blank"><img src="https://as1553-component-library.netlify.app/media/icons/github.svg"
+                        alt="github" width="25px" height="25px"></a></li>
+            <li><a href="mailto:abhijeetsingla1553@gmail.com"><img src="https://as1553-component-library.netlify.app/media/icons/email.svg" alt="email" width="25px"
+                        height="25px"></a></li>
+        </ul>
+        <p>No Copyright &#169 2022. Made by Abhijeet Singla</p>
+    </footer> -->
+</body>
+</html>
